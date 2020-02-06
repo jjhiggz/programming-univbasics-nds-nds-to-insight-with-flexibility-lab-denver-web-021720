@@ -82,13 +82,12 @@ def gross_per_studio(collection)
       hash[key]= collection[i][:worldwide_gross] + hash[key]
     end
     i+= 1
-=======
+
     if !hash[collection[i][:title]]
       hash[collection[i][:title]] = collection[i][:worldwide_gross]
     else
       hash[collection[i][:title]]= collection[i][:worldwide_gross] + hash[collection[i][:title]]
     end
->>>>>>> 6ea317887667d284fd61385040cc70352face186
   end
 end
 
