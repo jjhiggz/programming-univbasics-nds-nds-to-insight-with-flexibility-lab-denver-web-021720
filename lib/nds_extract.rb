@@ -74,7 +74,6 @@ def gross_per_studio(collection)
   hash = {}
   i=0
   while i <collection.length
-<<<<<<< HEAD
     #binding.pry
     key = collection[i][:title]
     if !hash[key]
