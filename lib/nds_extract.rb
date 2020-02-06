@@ -74,6 +74,7 @@ def gross_per_studio(collection)
   hash = {}
   i=0
   while i <collection.length
+<<<<<<< HEAD
     #binding.pry
     key = collection[i][:title]
     if !hash[key]
@@ -82,8 +83,23 @@ def gross_per_studio(collection)
       hash[key]= collection[i][:worldwide_gross] + hash[key]
     end
     i+= 1
+=======
+    if !hash[collection[i][:title]]
+      hash[collection[i][:title]] = collection[i][:worldwide_gross]
+    else
+      hash[collection[i][:title]]= collection[i][:worldwide_gross] + hash[collection[i][:title]]
+    end
+>>>>>>> 6ea317887667d284fd61385040cc70352face186
   end
 end
+
+puts 'a'
+collection =  [
+  { :title => "Movie A", :studio => "Alpha Films", :worldwide_gross => 10 },
+  { :title => "Movie B", :studio => "Alpha Films", :worldwide_gross => 30 },
+  { :title => "Movie C", :studio => "Omega Films", :worldwide_gross => 30 }
+]
+puts gross_per_studio(collection)
 
 def movies_with_directors_set(source)
   # GOAL: For each director, find their :movies Array and stick it in a new Array
@@ -93,6 +109,7 @@ def movies_with_directors_set(source)
   # RETURN:
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
+<<<<<<< HEAD
   #binding.pry
   a =[]
   i=0
@@ -110,6 +127,9 @@ def movies_with_directors_set(source)
   end
 
   return a
+=======
+  binding.pry
+>>>>>>> 6ea317887667d284fd61385040cc70352face186
 end
 source = [{:name=>"Byron Poodle",
   :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
