@@ -124,9 +124,9 @@ def movies_with_directors_set(source)
   end
 
   return a
-=======
+
   binding.pry
->>>>>>> 6ea317887667d284fd61385040cc70352face186
+
 end
 source = [{:name=>"Byron Poodle",
   :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
