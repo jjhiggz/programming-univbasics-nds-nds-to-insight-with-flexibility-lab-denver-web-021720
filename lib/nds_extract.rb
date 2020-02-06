@@ -81,13 +81,14 @@ def gross_per_studio(collection)
     else
       hash[key]= collection[i][:worldwide_gross] + hash[key]
     end
-    i+= 1
+
 binding.pry
     if !hash[collection[i][:title]]
       hash[collection[i][:title]] = collection[i][:worldwide_gross]
     else
       hash[collection[i][:title]]= collection[i][:worldwide_gross] + hash[collection[i][:title]]
     end
+      i+= 1
   end
 end
 
@@ -124,10 +125,8 @@ def movies_with_directors_set(source)
   end
 
   return a
-
-  binding.pry
-
 end
+
 source = [{:name=>"Byron Poodle",
   :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
  {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
