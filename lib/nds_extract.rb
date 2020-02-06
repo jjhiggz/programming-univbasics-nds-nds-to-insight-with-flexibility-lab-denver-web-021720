@@ -82,7 +82,7 @@ def gross_per_studio(collection)
       hash[key]= collection[i][:worldwide_gross] + hash[key]
     end
     i+= 1
-
+binding.pry
     if !hash[collection[i][:title]]
       hash[collection[i][:title]] = collection[i][:worldwide_gross]
     else
